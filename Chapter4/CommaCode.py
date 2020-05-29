@@ -1,4 +1,4 @@
-def listToString(ListParameter):
+def CommaCode(ListParameter):
     String=''
     for i in range(len(ListParameter)):
 
@@ -7,10 +7,10 @@ def listToString(ListParameter):
             String += ' and '
         elif(i== (len(ListParameter)-1)):
             return String
-        else:    
+        else:
             String += ', '
-
+    return None
 #arguments=[]
-arguments = ['apples','bananas','tofu','cats']  
-String = listToString(arguments)
-print(String)    
+arguments = ['apples','bananas','tofu','cats']
+String = CommaCode(arguments)
+print(String)
