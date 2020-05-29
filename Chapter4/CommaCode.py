@@ -11,6 +11,6 @@ def listToString(ListParameter):
             String += ', '
 
 #arguments=[]
-arguments = ['apples','bananas','tofu','cats'   ]  
+arguments = ['apples','bananas','tofu','cats']  
 String = listToString(arguments)
 print(String)    
