@@ -1,4 +1,6 @@
 def printTable(tableData):
+    #creating a list for storing the width of the longest
+    #number of letters of a string in each column
     colWidth = [0]* len(tableData)
     for i in range(len(tableData)):
         for j in range(len(tableData[i])):
@@ -14,7 +16,7 @@ def printTable(tableData):
     return None
 
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
-            ['Alice', 'Bob', 'Carol', 'David'],
-            ['dogs', 'cats', 'moose', 'goose']]
+             ['Alice', 'Bob', 'Carol', 'David'],
+             ['dogs', 'cats', 'moose', 'goose']]
 
 printTable(tableData)
