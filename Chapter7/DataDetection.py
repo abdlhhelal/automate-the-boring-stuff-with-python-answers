@@ -8,9 +8,6 @@ def dateDetection(date):
                               ([1-2][0-9]{3}) # Years
                                                 )''',re.VERBOSE)
     dateFound=dateRegex.findall(date)
-    Day=0
-    Month=0
-    Year=0
     DMY=[]
     for groups in dateFound:
         Day=int(groups[1])
