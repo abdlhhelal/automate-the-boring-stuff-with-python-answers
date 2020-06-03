@@ -19,9 +19,7 @@ def dateDetection(date):
             elif Day==30 and Month!=2:
                 DMY.append(groups[0])
             elif Day==29 and Month==2 and Year%4==0:
-                if Year%100==0 and Year%400!=0:
-                    pass
-                else:
+                if not Year%100==0 and Year%400!=0:
                     DMY.append(groups[0])
             elif Day<=28:
                 DMY.append(groups[0])
