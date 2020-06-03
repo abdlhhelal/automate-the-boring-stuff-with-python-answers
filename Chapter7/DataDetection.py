@@ -8,25 +8,25 @@ def dateDetection(date):
                               ([1-2][0-9]{3}) # Years
                                                 )''',re.VERBOSE)
     dateFound=dateRegex.findall(date)
-    Day=''
-    Month=''
-    Year=''
+    Day=0
+    Month=0
+    Year=0
     DMY=[]
     for groups in dateFound:
-        Day=groups[1]
-        Month=groups[2]
-        Year=groups[3]
-        if  int(Day)<=31 and int(Month)<=12:
-            if  int(Day)==31 and int(Month)!=4 and int(Month)!=6 and int(Month)!=9 and int(Month)!=11:
+        Day=int(groups[1])
+        Month=int(groups[2])
+        Year=int(groups[3])
+        if  Day<=31 and Month<=12:
+            if  Day==31 and Month!=4 and Month!=6 and Month!=9 and Month!=11:
                 DMY.append(groups[0])
-            elif int(Day)==30 and int(Month)!=2:
+            elif Day==30 and Month!=2:
                 DMY.append(groups[0])
-            elif int(Day)==29 and int(Month)==2 and int(Year)%4==0:
-                if int(Year)%100==0 and int(Year)%400!=0:
+            elif Day==29 and Month==2 and Year%4==0:
+                if Year%100==0 and Year%400!=0:
                     pass
                 else:
                     DMY.append(groups[0])
-            elif int(Day)<=28:
+            elif Day<=28:
                 DMY.append(groups[0])
     for i in DMY:
         print(i)
